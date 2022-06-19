@@ -29,8 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-c2&n(i_yy@)(z&kdecfsq7d^tak7@@%ocntre*anj%^13qnqjd'
-SECRET_KEY =""
+# SECRET_KEY =='django-insecure-c2&n(i_yy@)(z&kdecfsq7d^tak7@@%ocntre*anj%^13qnqjd'
+# SECRET_KEY ="django-insecure-7ty-nf#3nl-7+acu5niz@@p*tr^sz$uj)%jc0+rxplq(#0z4qj"
 # SECURITY WARNING: don't run with debug turned on in production!
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
@@ -67,7 +67,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 INSTALLED_APPS = [
     'Neiba',
     'crispy_forms',
-    'bootstrap5',
+    # 'bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
