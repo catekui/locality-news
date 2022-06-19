@@ -16,7 +16,7 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name
-
+    
 class Neighbourhood(models.Model):
     name = models.CharField(max_length=20)
     photo = models.ImageField(upload_to = 'media/', null = True, blank = True)
@@ -54,8 +54,7 @@ class Neighbourhood(models.Model):
     @classmethod
     def update_occupants(cls, occupants_count):
         cls.objects.filter(occupants_count=occupants_count).update()
-
-
+        
 class Profile(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, related_name='profile', null=True)
@@ -142,6 +141,4 @@ class Post(models.Model):
 
     def _str_(self):
         return self.name
-    
-
     
