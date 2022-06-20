@@ -40,20 +40,3 @@ class LocationTestClass(TestCase):
         locations = Location.objects.all()
         self.assertTrue(len(locations) == 0)
         
-class PostTestClass(TestCase):
-    def setUp(self):
-        self.post = Post(title='First Post')
-
-    def test_instance(self):
-        self.assertTrue(isinstance(self.post, Post))
-        
-    def test_save_method(self):
-        self.post.save()
-        posts = Post.objects.all()
-        self.assertTrue(len(posts) > 0)
-
-    def test_delete_method(self):
-        self.post.save()
-        self.post.delete_post()
-        posts = Post.objects.all()
-        self.assertTrue(len(posts) == 0)
