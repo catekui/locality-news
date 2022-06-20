@@ -17,7 +17,8 @@
         border: 2px solid black;
        
         padding: 5%;
-        background: linear-gradient(to top left, #d6a6a3, #f5c88e);
+        background-color: powderblue;
+        /* background: linear-gradient(to top left, #d6a6a3, #f5c88e); */
         filter: drop-shadow(2px 4px 8px #585858);
     }
 
@@ -35,7 +36,7 @@
             <form action="{%url 'create_post'%}" method="post" enctype="multipart/form-data">
                 {%csrf_token%}
                 {% bootstrap_form form%}
-                <input type="submit" class="btn btn-outline-info" style="background-color:powderblue" value="Create post">
+                <input type="submit" class="btn btn-outline-info" style="background-color:grey" value="Create post">
             </form>
         </div>
         <div class="col-md-2"></div>
